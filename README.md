@@ -1,4 +1,37 @@
 # Python Notes for Machine Learning and Data Science
+
+### Requirements
+- [Python3.9](https://docs.python-guide.org/)
+
+### How To
+
+Setup the Python Virtual Environment
+```bash
+# 1 - Check that Python3.9 is installed
+python -V
+
+# 2 - Create the virtual environment
+python -m venv venv
+
+# 3 - Initialize the virtual environment
+source venv/bin/activate
+
+# 4 - Update pip to avoid warnings on the versions
+python -m pip install --upgrade pip
+
+# 5 - Install dependencies
+pip install -r requirements.txt
+
+# 6 - Initialize Jupyter Lab
+jupiter-lab
+
+# 7 - To quite the virtual environment
+deactivate
+
+# NOTE: Follow steps 2-to-5 any time that the venv needs to created
+```
+
+### Notes
 - [book](docs/ISLRv2.pdf)
 - Machine Learning Types:
     - Supervised Learning:
