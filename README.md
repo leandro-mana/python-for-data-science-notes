@@ -23,7 +23,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 6 - Initialize Jupyter Lab
-jupiter-lab
+jupyter-lab
 
 # 7 - To quite the virtual environment
 deactivate
