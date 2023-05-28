@@ -1,37 +1,40 @@
+---
+noteId: "4006539007a811edbdef876a303e782a"
+tags: []
+
+---
+
 # Python Notes for Machine Learning and Data Science
 
+The purpose of this repository is to compile a set of notes related with the different aspects and toolings of Python applied on Data Science
+
 ### Requirements
-- [Python3.9](https://docs.python-guide.org/)
+- `Python3.10.0` by using [pyenv](https://realpython.com/intro-to-pyenv/)
+    - OR installing a fixed [version](https://docs.python-guide.org/)
 
 ### How To
 
-Setup the Python Virtual Environment
+Setup the Python Virtual Environment via [pipenv](https://realpython.com/pipenv-guide/)
 ```bash
-# 1 - Check that Python3.9 is installed
+# 1 - Check that Python3.10 is installed, then install pipenv
 python -V
+pip install --upgrade pip && pip install pipenv
 
 # 2 - Create the virtual environment
-python -m venv venv
+pipenv install --dev
 
-# 3 - Initialize the virtual environment
-source venv/bin/activate
+# 3 - Initialize Jupyter Lab
+pipenv run jupyter lab
 
-# 4 - Update pip to avoid warnings on the versions
-python -m pip install --upgrade pip
+# 4 - OPTIONAL - Virtual environment shell
+pipenv shell
 
-# 5 - Install dependencies
-pip install -r requirements.txt
-
-# 6 - Initialize Jupyter Lab
-jupyter-lab
-
-# 7 - To quite the virtual environment
-deactivate
-
-# NOTE: Follow steps 2-to-5 any time that the venv needs to created
+# NOTE: To re-create the virtual environment
+pipenv --rm
+pip install --dev
 ```
 
-### Notes
+### Topics
 - [book](docs/ISLRv2.pdf)
 - Machine Learning Types:
     - Supervised Learning:
@@ -42,18 +45,18 @@ deactivate
             - Assigning Image Category, handwriting Recognition
         - Continuous values to predict, Regression Task:
             - Future Prices
-            - Eletricity Loads
+            - Electricity Loads
             - Test Scores
     - unsupervised Learning:
         - Applied to unlabeled data, the ML model discovers possible patterns in the data
-        - Example, clustering customers into separate groups based off their behaviours features
+        - Example, clustering customers into separate groups based off their behaviors features
         - Major downside is because there was no historical "Correct" label, its much complex to evaluate performance
 
 - Supervised Learning ML Process on the example of determine the price of a house to be sell:
     - Start by collecting and organizing a data set based on history
     - get a product that determine the price of the house
     - Input house features
-    - Ouput predicted selling price
+    - Output predicted selling price
     - X -> Features (Area, Bedrooms, bathrooms)  | Y -> Label (price)
     - Split data into training and test set, this is to evaluate the performance on known data, then compare the results
     - If the performance on the Test set is not good enough, then adjust the Hyper parameters, repeat the process
