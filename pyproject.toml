@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "python-for-data-science-notes"
 version = "0.1.0"
-description = "Study notes and interactive Jupyter notebooks for Python Data Science — from fundamentals through NumPy, Pandas, Matplotlib, and Seaborn"
+description = "Study notes and interactive Jupyter notebooks for Python Data Science — from fundamentals through NumPy, Pandas, Matplotlib, Seaborn, and Machine Learning with Scikit-Learn"
 authors = ["Leandro Mana <leandromana@gmail.com>"]
 readme = "README.md"
 packages = [{include = "src"}]
@@ -16,6 +16,7 @@ openpyxl = "^3.1"
 lxml = "^5.0"
 fastparquet = "^2024.0"
 sqlalchemy = "^2.0"
+scikit-learn = "^1.5"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.0"
